@@ -1,4 +1,4 @@
-list = []
+'''list = []
 d = dict()
 def number():
   num = int(input("Enter a number:"))
@@ -16,4 +16,4 @@ def check(a):
             d["List:"] = list
             d["Length:"] = len(list)
     return d
-print(check(a))
+print(check(a))'''
