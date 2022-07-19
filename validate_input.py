@@ -9,7 +9,7 @@ def user_choice():
         if choice.isdigit() == False:
             print('Sorry that is not a digit!')
         
-        if choice.isdigit() == True:
+        elif choice.isdigit() == True:
             if int(choice) in acceptable_range:
                 within_range = True
             else:
