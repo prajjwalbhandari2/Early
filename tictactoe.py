@@ -1,20 +1,31 @@
-position_list = [0,1,2]
+from IPython.display import clear_output
 
-def display_game(position_list):
-    print(f"Here is the list of positions:\n{position_list}")
 
-display_game(position_list)
+def display_board(board):
+    clear_output()
+    print(board[7]+' '+'|'+' '+board[8]+' '+'|'+' '+board[9])
+    print('-'+'-'+'|'+'-'+'-'+'-'+'|'+'-'+'-')
+    print(board[4]+' '+'|'+' '+board[5]+' '+'|'+' '+board[6])
+    print('-'+'-'+'|'+'-'+'-'+'-'+'|'+'-'+'-')
+    print(board[1]+' '+'|'+' '+board[2]+' '+'|'+' '+board[3])
 
-def position_check():
-    choice = input('Pick a position (0-2):')
 
-    while choice not in ['0','1','2']:
-        print('Sorry you did not choose a valid position, Try Again!')
-        choice = input('Pick a position (0-2):')
+board = [' ']*10
 
-    return int(choice)
 
-position_index = position_check()
+def player_input():
+    marker = ''
+    
+    while marker not in ['X','O']:
+        marker = input('Player 1, Choose your marker (X or O):').upper()
+        if marker not in ['X','O']:
+            print('Marker invalid!')
 
-def replacement_choice(gamelist,position_index):
-    user_placement = input 
+    Player1 = marker
+    if Player1 == 'X':
+        Player2 = 'O'
+    else:
+        Player2 = 'X'
+    return (f'Player1 is {Player1}\nPlayer2 is {Player2}')
+print(player_input())
+
