@@ -432,3 +432,24 @@ for x in range(1,51):
     a.append(x)
 print(a)    '''
 
+'''for i in range(1,6):
+  print('*' * i)'''
+
+
+
+
+
+'''a =[" ", " ", " ", " ", " "," "]
+for i in range(5,-1,-1):
+  for x in range(5,i,-1):
+    a[x] = '*'
+  b = ' '.join(a)
+  if b == "           ":
+    pass
+  else:
+    print(b)
+
+
+height = 5
+for row in range(1, height+ 1):
+    print(" " * (height - row) +"*" * row)'''
