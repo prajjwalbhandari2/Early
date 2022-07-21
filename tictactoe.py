@@ -59,6 +59,14 @@ def position_check():
 
 position = position_check()
 
+def placing(board, position, marker):
+    board[position] = marker
+
+#win conditions
+def win_condition():
+    return ((board[7]=board[8]=board))
+
+
 
 #does the user want to play again?
 def play_again():
