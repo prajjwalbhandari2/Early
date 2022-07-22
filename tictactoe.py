@@ -43,12 +43,24 @@ def flip_test():
 
 #check the position player wants to assign the marker to
 def position_check(board):
-    position = int(input('Pick a position (1-9):'))
+    position = 'Wrong'
+    acceptable_range = range(1,10)
+    within_range = False
 
-    while position not in range(1,10) or not space_check(board,position):
-        print('Sorry you did not choose a valid position, Try Again!')
-        position = int(input('Pick a position (1-9):'))
-    return position
+    while position.isdigit() == False or within_range == False:
+        position = input('Enter a number (1-9):')
+
+        if position.isdigit() == False:
+            print('Sorry that is not a digit!')
+        
+        elif position.isdigit() == True:
+            if int(position) in acceptable_range and space_check(board,int(position)):
+                within_range = True
+            else:
+                print('Sorry you did not choose a valid position, Try Again!')
+                within_range = False
+    return int(position)
+
 
 
 #space check if the position is empty
