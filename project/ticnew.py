@@ -2,10 +2,10 @@
 
 
 from turtle import position
-from IPython.display import clear_output
+import os
 import random
 def display_board(board):
-    clear_output()
+    os.system('clear')
     print(' '+board[7]+' '+'|'+' '+board[8]+' '+'|'+' '+board[9])
     print('-'+'-'+'-'+'|'+'-'+'-'+'-'+'|'+'-'+'-'+'-')
     print(' '+board[4]+' '+'|'+' '+board[5]+' '+'|'+' '+board[6])
