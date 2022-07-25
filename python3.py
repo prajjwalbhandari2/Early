@@ -453,3 +453,45 @@ for i in range(5,-1,-1):
 height = 5
 for row in range(1, height+ 1):
     print(" " * (height - row) +"*" * row)'''
+
+
+'''from cmath import pi
+
+
+class Circle():
+  #class object attribute
+  pi = 3.14
+
+  def __init__(self):
+    radius = int(input("Enter the redius of the circle:"))
+    self.radius = radius
+
+  def circumference(self):
+    cir = 2 * self.pi * self.radius      #self.pi ko sattaa Circle.pi lekhna pani paiyo 
+    return f'The circrumference of circle is {cir}'
+a = Circle()
+print(a.circumference())'''
+
+from unicodedata import name
+
+
+class Animal():
+  def __init__(self,name):
+    self.name = name
+  
+  def speak(self):
+    raise NotImplementedError('Subclass must be implemented!')
+
+class dog(Animal):
+  def speak(self):
+    return f'{self.name} says woof!'
+fido = dog('Fido')
+print(fido.speak())
+
+class cat(Animal):
+
+  def speak(self):
+    return f'{self.name} says meow!'
+isis = cat('Isis')
+print(isis.speak())
+    
